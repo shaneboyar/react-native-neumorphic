@@ -73,7 +73,7 @@ jobs:
           command: npm publish
 workflows:
   version: 2
-  build-and-test:
+  build-test-and-deploy:
     jobs:
       - install-dependencies
       - lint:
@@ -86,5 +86,8 @@ workflows:
           requires:
             - install-dependencies
       - build-package:
+          requires:
+            - install-dependencies
+      - deploy:
           requires:
             - install-dependencies

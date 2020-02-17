@@ -65,7 +65,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/project
-      - run:
+      - authenticate:
           name: Authenticate with registry
           command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/project/.npmrc
       - run:
@@ -90,4 +90,4 @@ workflows:
             - install-dependencies
       - deploy:
           requires:
-            - install-dependencies
+            - build-package

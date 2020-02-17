@@ -1,6 +1,6 @@
 {
   "name": "react-native-neumorphic",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "description": "Neumorph your components!",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
@@ -20,7 +20,8 @@
     "prepare": "bob build",
     "example": "yarn --cwd example",
     "example:ios": "yarn --cwd example ios",
-    "bootstrap": "yarn example && yarn && cd example/ios && pod install"
+    "bootstrap": "yarn example && yarn && cd example/ios && pod install",
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "react-native",
@@ -52,7 +53,8 @@
     "react-native": "~0.61.5",
     "react-native-inset-shadow": "^1.0.2",
     "react-native-linear-gradient": "^2.5.6",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "semantic-release": "^17.0.4"
   },
   "peerDependencies": {
     "react": "*",

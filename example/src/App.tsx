@@ -15,13 +15,13 @@ const Box = ({ borderWidth = 0 }) => (
 );
 
 const config = {
-  distance: 20,
+  distance: 50,
   intensity: 0.15,
-  blur: 20,
+  blur: 60,
   shape: NeumorphConfigShapes.Flat,
 };
 
-const NeumorphicBox = Neumorph(Box);
+const NeumorphicBox = Neumorph(Box, config);
 
 export default function App() {
   return (

@@ -21,8 +21,8 @@ jobs:
             - dependencies-example-{{ checksum "example/package.json" }}
             - dependencies-example-
       - run: |
-          yarn install --cwd example --frozen-lockfile
-          yarn install --frozen-lockfile
+          yarn install --cwd example
+          yarn install
       - save_cache:
           key: dependencies-{{ checksum "package.json" }}
           paths: node_modules
@@ -78,19 +78,37 @@ workflows:
   version: 2
   build-test-and-deploy:
     jobs:
-      - install-dependencies
+      - install-dependencies:
+          filters:
+            branches:
+              only: master
       - lint:
+          filters:
+            branches:
+              only: master
           requires:
             - install-dependencies
       - typescript:
+          filters:
+            branches:
+              only: master
           requires:
             - install-dependencies
       - unit-tests:
+          filters:
+            branches:
+              only: master
           requires:
             - install-dependencies
       - build-package:
+          filters:
+            branches:
+              only: master
           requires:
             - install-dependencies
       - deploy:
+          filters:
+            branches:
+              only: master
           requires:
             - build-package

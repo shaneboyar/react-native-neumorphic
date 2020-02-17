@@ -1,0 +1,101 @@
+{
+  "name": "react-native-neumorphic",
+  "version": "0.1.0",
+  "description": "Neumorph your components!",
+  "main": "lib/commonjs/index.js",
+  "module": "lib/module/index.js",
+  "types": "lib/typescript/src/index.d.ts",
+  "react-native": "src/index.tsx",
+  "files": [
+    "src",
+    "lib",
+    "android",
+    "ios",
+    "reactnativeneumorphic.podspec"
+  ],
+  "scripts": {
+    "test": "jest",
+    "typescript": "tsc --noEmit",
+    "lint": "eslint --ext .js,.ts,.tsx .",
+    "prepare": "bob build",
+    "example": "yarn --cwd example",
+    "example:ios": "yarn --cwd example ios",
+    "bootstrap": "yarn example && yarn && cd example/ios && pod install"
+  },
+  "keywords": [
+    "react-native",
+    "ios",
+    "android"
+  ],
+  "repository": "https://github.com/shaneboyar/react-native-neumorphic",
+  "author": "Shane <shane.boyar@gmail.com> (https://github.com/shaneboyar)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shaneboyar/react-native-neumorphic/issues"
+  },
+  "homepage": "https://github.com/shaneboyar/react-native-neumorphic#readme",
+  "devDependencies": {
+    "@commitlint/config-conventional": "^8.3.4",
+    "@react-native-community/bob": "^0.9.7",
+    "@react-native-community/eslint-config": "^0.0.7",
+    "@types/jest": "^25.1.2",
+    "@types/react": "^16.9.19",
+    "@types/react-native": "0.61.10",
+    "commitlint": "^8.3.4",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.0.1",
+    "jest": "^25.1.0",
+    "prettier": "^1.19.1",
+    "react": "~16.9.0",
+    "react-native": "~0.61.5",
+    "react-native-inset-shadow": "^1.0.2",
+    "react-native-linear-gradient": "^2.5.6",
+    "typescript": "^3.7.5"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-linear-gradient": "^2.5.6",
+    "react-native-inset-shadow": "^1.0.2"
+  },
+  "jest": {
+    "preset": "react-native",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/lib/"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "yarn lint && yarn typescript"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "@react-native-community",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "tabWidth": 2,
+          "trailingComma": "es5",
+          "useTabs": false
+        }
+      ]
+    }
+  },
+  "@react-native-community/bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
+  }
+}

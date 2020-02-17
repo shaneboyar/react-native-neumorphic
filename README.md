@@ -11,8 +11,8 @@ npm install react-native-neumorphic
 ## Usage
 
 ```js
-import Component from 'some-module";
-import Neumorphic from "react-native-neumorphic";
+import Component from 'some-module';
+import Neumorphic from 'react-native-neumorphic';
 
 // ...
 // You can pass an optional configuration object, if you don't this is what it will default to
@@ -26,7 +26,7 @@ const NeumorphicComponent = Neumorphic(Component, config);
 
 // ...
 
-<Neumorphic />
+<Neumorphic />;
 ```
 
 ## License

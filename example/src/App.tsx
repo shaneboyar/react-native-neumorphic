@@ -1,10 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import * as React from 'react';
 import { StyleSheet, View } from 'react-native';
-import Neumorph, {
-  NeumorphConfig,
-  NeumorphConfigShapes,
-} from 'react-native-neumorphic';
+import Neumorph, { NeumorphConfigShapes } from 'react-native-neumorphic';
 
 const Box = ({ borderWidth = 0 }) => (
   <View
@@ -17,14 +14,14 @@ const Box = ({ borderWidth = 0 }) => (
   />
 );
 
-const config: NeumorphConfig = {
-  distance: 40,
-  intensity: 0.6,
-  blur: 40,
+const config = {
+  distance: 20,
+  intensity: 0.15,
+  blur: 20,
   shape: NeumorphConfigShapes.Flat,
 };
 
-const NeumorphicBox = Neumorph(Box, config);
+const NeumorphicBox = Neumorph(Box);
 
 export default function App() {
   return (

@@ -4,6 +4,7 @@
 [![CircleCI](https://circleci.com/gh/shaneboyar/react-native-neumorphic.svg?style=svg)](https://circleci.com/gh/shaneboyar/react-native-neumorphic)
 
 Neumorph your components!
+Inspired by [Neumorphism.io](https://neumorphism.io/)
 
 ## Installation
 

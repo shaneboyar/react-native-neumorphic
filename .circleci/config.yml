@@ -71,9 +71,6 @@ jobs:
       - run:
           name: Increase version number
           command: yarn semantic-release
-      - run:
-          name: Publish package
-          command: npm publish
 workflows:
   version: 2
   build-test-and-deploy:

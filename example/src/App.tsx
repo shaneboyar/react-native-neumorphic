@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import * as React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Switch } from 'react-native';
 import Neumorph, { NeumorphConfigShapes } from 'react-native-neumorphic';
 
 const Box = ({ borderWidth = 0 }) => (
@@ -24,9 +24,15 @@ const config = {
 const NeumorphicBox = Neumorph(Box, config);
 
 export default function App() {
+  const [neumorph, setNuemorph] = React.useState(false);
   return (
     <View style={styles.container}>
-      <NeumorphicBox />
+      <Switch
+        value={neumorph}
+        onValueChange={setNuemorph}
+        style={{ marginBottom: 32 }}
+      />
+      {neumorph ? <NeumorphicBox /> : <Box borderWidth={1} />}
     </View>
   );
 }

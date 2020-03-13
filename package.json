@@ -1,6 +1,6 @@
 {
   "name": "react-native-neumorphic",
-  "version": "0.0.0-development",
+  "version": "0.0.1",
   "description": "Neumorph your components!",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",

@@ -219,7 +219,7 @@ PODS:
     - React-cxxreact (= 0.61.5)
     - React-jsi (= 0.61.5)
     - ReactCommon/jscallinvoker (= 0.61.5)
-  - reactnativeneumorphic (0.1.0):
+  - reactnativeneumorphic (0.0.1):
     - React
   - Yoga (1.14.0)
 
@@ -342,7 +342,7 @@ SPEC CHECKSUMS:
   React-RCTText: 9ccc88273e9a3aacff5094d2175a605efa854dbe
   React-RCTVibration: a49a1f42bf8f5acf1c3e297097517c6b3af377ad
   ReactCommon: 198c7c8d3591f975e5431bec1b0b3b581aa1c5dd
-  reactnativeneumorphic: 8219cb8cdb453d44586e6a53888b29b3bd73473d
+  reactnativeneumorphic: 063c1286f5bfcb7b1c5f66992bcce126a97de2f3
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
 PODFILE CHECKSUM: 89539cc69579302cce828e24e287db1a1995bb5f

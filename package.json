@@ -54,7 +54,7 @@
     "react-native-inset-shadow": "^1.0.2",
     "react-native-linear-gradient": "^2.5.6",
     "typescript": "^3.7.5",
-    "semantic-release": "^17.0.4"
+    "semantic-release": "^19.0.3"
   },
   "peerDependencies": {
     "react": "*",
